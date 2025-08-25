@@ -7,6 +7,93 @@
     <script src="./assets/js/main.js" type="module" defer></script>
 </head>
 <body>
+    <div class="page">
+        <header class="page-header">
+            <h1 class="header__title">Planejador de Viagens</h1>
+            <h2 class="header__subtitle">Calcule todos os custos e detalhes da sua próxima viagem</h2>
+        </header>
+
+        <main class="page-content">
+            <h2 class="section__title">Dados da Viagem</h2>
+            <hr>
+
+            <section class="trip-data">
+                <form class="trip-data__form">
+                    <label class="form__label" for="origin">Origem:</label>
+                    <select class="form__select" name="origin" id="origin">
+                        <!-- Injetar as Origens através do JS -->
+                    </select>
     
+                    <label class="form__label" for="destination">Destino:</label>
+                    <select class="form__select" name="destination" id="destination">
+                        <!-- Injetar os Destinos através do JS -->
+                    </select>
+    
+                    <ul class="form__data">
+                        <li data-type="distancia">Distância: <b><span>-</span> km</b></li>
+                        <li data-type="pedagios">Pedágios: <b><span>-</span></b>/li>
+                        <li data-type="valorPedagios">Valor total pedágios: <b>R$ <span>-</span></b></li>
+                        <li data-type="restaurantes">Restaurantes no trajeto: <b><span>-</span></b></li>
+                        <li data-type="tempoEstimado">Tempo estimado: <b><span>-</span></b></li>
+                        <li data-type="pontosTuristicos">Pontos turísticos: <b><span>-</span></b></li>
+                    </ul>
+                </form>
+            </section>
+
+            <section class="vehicle-data">
+                <h2 class="section__title">Dados da Viagem</h2>
+                <hr>
+
+                <form class="vehicle-data__form">
+                    <label for="gasConsume" class="form__label">Consumo do veículo (km/l):</label>
+                    <input type="number" name="gasconsume" id="gasConsume">
+    
+                    <label for="gasPrice" class="form__label">Preço do combustível (R$/l):</label>
+                    <input type="number" name="gasprice" id="gasPrice">
+    
+                    <label for="averageSpeed" class="form__label">Velocidade média (km/h):</label>
+                    <input type="number" name="averagespeed" id="averageSpeed">
+    
+                    <div class="form__buttons">
+                        <button type="submit">Calcular</button>
+                        <button type="reset">Limpar</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="results">
+                <h2 class="section__title">Resultados</h2>
+                <hr>
+
+                <div class="results__data-wrapper">
+                    <div class="data-wrapper__card">
+                        <h3 class="card__title">Combustível</h3>
+                        <span>Litros necessários: <b>- litros</b></span>
+                        <span>Custo total: <b>R$ -</b></span>
+                    </div>
+
+                    <div class="data-wrapper__card">
+                        <h3 class="card__title">Tempo de Viagem</h3>
+                        <span>Tempo estimado: <b>-h -min</b></span>
+                    </div>
+
+                    <div class="data-wrapper__card">
+                        <h3 class="card__title">Custos Adicionais</h3>
+                        <span>Pedágios: <b>- litros</b></span>
+                        <span>Custo total: <b>R$ -</b></span>
+                    </div>
+
+                    <div class="data-wrapper__card">
+                        <h3 class="card__title">Custo Total</h3>
+                        <span>Total da viagem: <b>R$ -</b></span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="page-footer">
+            <span>&copy; 2025 Planejador de Viagens - Exemplo de JavaScript Type Module</span>
+        </footer>
+    </div>
 </body>
 </html>
