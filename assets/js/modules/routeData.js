@@ -15,7 +15,7 @@
  * - tempoEstimado: tempo estimado em horas (sem paradas) baseado em velocidade média de 80km/h
  * - pontosTuristicos: pontos turísticos no caminho
  */
-const routes = [
+export const routes = [
     {
         id: 1,
         origem: "São Paulo",
