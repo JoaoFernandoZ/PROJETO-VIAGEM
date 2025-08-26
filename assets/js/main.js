@@ -1,5 +1,5 @@
 import { routes } from './modules/routeData.js';
-import { fillSelectWithOrigins, fillSelectByOrigin } from './modules/tripDataHandler.js';
+import { fillSelectWithOrigins, fillSelectByOrigin } from './modules/uiUpdater.js';
 
 const tripDataForm = document.querySelector('.trip-data__form');
 const vehicleDataForm = document.querySelector('.vehicle-data__form');
@@ -13,7 +13,7 @@ function onOriginChanged(event){
     });
 
     fillSelectByOrigin(destinationSelect, originSelect.value, routes);
-}
+};
 
 function init(){
     const originSelect = tripDataForm.origin;
