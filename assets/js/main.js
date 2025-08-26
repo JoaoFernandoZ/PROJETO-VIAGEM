@@ -26,7 +26,7 @@ function onRouteChanged(event){
     if (!routeObject) return;
 
     fillRouteData(routeDataElement, routeObject);
-}
+};
 
 function init(){
     const originSelect = tripDataForm.origin;

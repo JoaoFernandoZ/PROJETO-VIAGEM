@@ -9,14 +9,15 @@ export function fillSelectWithOrigins(selectElement, routes){
 };
 
 export function fillSelectByOrigin(selectElement, origin, routes){
-    routes.map(object => {
-        const { origem, destino } = object;
+    const routesFromOrigin = routes.filter(object => object.origem === origin)
+    routesFromOrigin.map(object => {
+        const { destino } = object;
         const isThereAnOptionAlready = selectElement.querySelector(`option[value="${destino}"]`) != undefined;
-        if (origem !== origin | isThereAnOptionAlready) return;
+        if (isThereAnOptionAlready) return;
 
         selectElement.appendChild(new Option(destino, destino));
     });
-}
+};
 
 export function fillRouteData(containerElement, route){
     for (const key in route) {
@@ -25,5 +26,5 @@ export function fillRouteData(containerElement, route){
         if (!liElement | !spanElement) continue;
 
         spanElement.textContent = route[key];
-    }
-}
+    };
+};
