@@ -1,6 +1,7 @@
 import { routes } from './modules/routeData.js';
 import { fillSelectWithOrigins, fillSelectByOrigin, fillRouteData } from './modules/uiUpdater.js';
 import findRoute from './modules/findRoute.js'
+import calculateCosts from './modules/calculateCosts.js';
 
 const tripDataForm = document.querySelector('.trip-data__form');
 const costsDataForm = document.querySelector('.vehicle-data__form');
@@ -28,6 +29,19 @@ function onRouteChanged(){
     fillRouteData(routeDataElement, routeObject);
 };
 
+function onCostsSubmitted(event){
+    event.preventDefault();
+
+    const originValue = tripDataForm.origin.value;
+    const destinationValue = tripDataForm.destination.value;
+
+    const gasConsumeValue = costsDataForm.gasconsume;
+    const gasPriceValue = costsDataForm.gasprice;
+    const averageSpeedValue = costsDataForm.averagespeed;
+
+    const calculatedCosts = calculateCosts(originValue, destinationValue, gasConsumeValue, gasPriceValue, averageSpeedValue);
+};
+
 function init(){
     const originSelect = tripDataForm.origin;
     const destinationSelect = tripDataForm.destination;
@@ -35,6 +49,7 @@ function init(){
     originSelect.addEventListener('change', onOriginChanged);
     originSelect.addEventListener('change', onRouteChanged);
     destinationSelect.addEventListener('change', onRouteChanged);
+    costsDataForm.addEventListener('submit', onCostsSubmitted)
     fillSelectWithOrigins(originSelect, routes);
 };
 
