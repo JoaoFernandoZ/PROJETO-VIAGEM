@@ -3,7 +3,7 @@ import { fillSelectWithOrigins, fillSelectByOrigin, fillRouteData } from './modu
 import findRoute from './modules/findRoute.js'
 
 const tripDataForm = document.querySelector('.trip-data__form');
-const vehicleDataForm = document.querySelector('.vehicle-data__form');
+const costsDataForm = document.querySelector('.vehicle-data__form');
 
 function onOriginChanged(event){
     const originSelect = event.target;
@@ -16,7 +16,7 @@ function onOriginChanged(event){
     fillSelectByOrigin(destinationSelect, originSelect.value, routes);
 };
 
-function onRouteChanged(event){
+function onRouteChanged(){
     const originValue = tripDataForm.origin.value;
     const destinationValue = tripDataForm.destination.value;
     if (originValue==null | destinationValue==null) return;
