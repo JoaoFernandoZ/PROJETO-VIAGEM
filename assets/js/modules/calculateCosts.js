@@ -1,5 +1,5 @@
 import findRoute from './findRoute.js';
-import route from './routeData.js';
+import  { routes }  from './routeData.js';
 
 function calculateCosts(origin, destination, gasConsume=0, gasPrice=0, averageSpeed=0){
     const route = findRoute(origin, destination);

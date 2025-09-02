@@ -4,7 +4,7 @@ import findRoute from './modules/findRoute.js'
 import calculateCosts from './modules/calculateCosts.js';
 
 const tripDataForm = document.querySelector('.trip-data__form');
-const costsDataForm = document.querySelector('.vehicle-data__form');
+const costsDataForm = document.querySelector('.costs-data__form');
 
 function onOriginChanged(event){
     const originSelect = event.target;
@@ -40,6 +40,7 @@ function onCostsSubmitted(event){
     const averageSpeedValue = costsDataForm.averagespeed;
 
     const calculatedCosts = calculateCosts(originValue, destinationValue, gasConsumeValue, gasPriceValue, averageSpeedValue);
+    console.log(calculatedCosts);
 };
 
 function init(){
