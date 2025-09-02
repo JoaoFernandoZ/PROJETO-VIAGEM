@@ -1,8 +1,8 @@
 import findRoute from './findRoute.js';
-import  { routes }  from './routeData.js';
+import { routes }  from './routeData.js';
 
 function calculateCosts(origin, destination, gasConsume=0, gasPrice=0, averageSpeed=0){
-    const route = findRoute(origin, destination);
+    const route = findRoute(origin, destination, routes);
     if (!route) return;
 
     const liters = route.distancia / gasConsume;

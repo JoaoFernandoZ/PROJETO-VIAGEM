@@ -35,12 +35,11 @@ function onCostsSubmitted(event){
     const originValue = tripDataForm.origin.value;
     const destinationValue = tripDataForm.destination.value;
 
-    const gasConsumeValue = costsDataForm.gasconsume;
-    const gasPriceValue = costsDataForm.gasprice;
-    const averageSpeedValue = costsDataForm.averagespeed;
+    const gasConsumeValue = costsDataForm.gasconsume.value;
+    const gasPriceValue = costsDataForm.gasprice.value;
+    const averageSpeedValue = costsDataForm.averagespeed.value;
 
     const calculatedCosts = calculateCosts(originValue, destinationValue, gasConsumeValue, gasPriceValue, averageSpeedValue);
-    console.log(calculatedCosts);
 };
 
 function init(){
