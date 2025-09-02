@@ -12,6 +12,12 @@
     --hr: #a3a3a3;
 
     --card-background: rgba(26, 26, 26, 0.7);
+
+    --button-submit: rgb(53, 145, 221);
+    --button-submit-glow: rgb(95, 183, 255, 0.3);
+
+    --button-reset: rgb(221, 53, 53);
+    --button-reset-glow: rgba(255, 95, 95, 0.3);
 }
 
 hr{
@@ -33,6 +39,7 @@ button{
     border: 1px solid transparent;
     padding: 6px 12px;
     font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.25s;
 }
@@ -113,8 +120,26 @@ button:focus, button:focus-visible{
 
 .section__title{
     width: 100%;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
     border-bottom: 1px solid var(--hr);
+}
+
+button[type=submit]{
+    background-color: var(--button-submit);
+    color: #fff;
+}   
+
+button[type=submit]:hover{
+    box-shadow: 0 4px 8px var(--button-submit-glow);
+}
+
+button[type=reset]{
+    background-color: var(--button-reset);
+    color: #fff;
+}   
+
+button[type=reset]:hover{
+    box-shadow: 0 4px 8px var(--button-reset-glow);
 }
 
 .form__route-data{
