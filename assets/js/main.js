@@ -53,7 +53,7 @@ function init(){
     destinationSelect.addEventListener('change', onRouteChanged);
     costsDataForm.addEventListener('submit', onCostsSubmitted)
     fillSelectWithOrigins(originSelect, routes);
-    onOriginChanged()
+    onOriginChanged();
 };
 
 init();
