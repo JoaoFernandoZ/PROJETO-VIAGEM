@@ -11,3 +11,7 @@ input[type=number], input::-webkit-outer-spin-button, input::-webkit-inner-spin-
     margin: 0;
     -moz-appearance: textfield;
 }
+
+ul {
+    list-style-type: none;
+}
