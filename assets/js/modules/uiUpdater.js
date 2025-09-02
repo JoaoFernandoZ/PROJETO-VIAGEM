@@ -28,3 +28,13 @@ export function fillRouteData(containerElement, route){
         spanElement.textContent = route[key];
     };
 };
+
+export function fillResults(containerElement, resultsData){
+    for (const key in resultsData) {
+        const dataElement = containerElement.querySelector(`[data-type="${key}"]`);
+        const spanElement = dataElement!=undefined && dataElement.querySelector('span');
+        if (!dataElement | !spanElement) continue;
+
+        spanElement.textContent = resultsData[key];
+    };
+}
