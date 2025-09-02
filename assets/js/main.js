@@ -7,8 +7,8 @@ const tripDataForm = document.querySelector('.trip-data__form');
 const costsDataForm = document.querySelector('.costs-data__form');
 const resultsContainer = document.querySelector('.results');
 
-function onOriginChanged(event){
-    const originSelect = event.target;
+function onOriginChanged(){
+    const originSelect = tripDataForm.origin;
     const destinationSelect = tripDataForm.destination;
     
     destination.querySelectorAll('option').forEach(element => {
@@ -53,6 +53,7 @@ function init(){
     destinationSelect.addEventListener('change', onRouteChanged);
     costsDataForm.addEventListener('submit', onCostsSubmitted)
     fillSelectWithOrigins(originSelect, routes);
+    onOriginChanged()
 };
 
 init();
