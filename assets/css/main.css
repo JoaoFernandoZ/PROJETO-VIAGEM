@@ -18,6 +18,12 @@
 
     --button-reset: rgb(221, 53, 53);
     --button-reset-glow: rgba(255, 95, 95, 0.3);
+
+    --card-title-color: rgb(105, 187, 255);
+
+    --footer-text: #fff;
+    --footer-black: rgba(0,0,0,0.75);
+    --footer-background-gradient: linear-gradient(to right, rgba(0,0,0,0), var(--footer-black), rgba(0,0,0,0));
 }
 
 hr{
@@ -143,10 +149,54 @@ button[type=reset]:hover{
 }
 
 .form__route-data{
+    margin-top: 4px;
     width: 100%;
     border-left: 2px solid var(--header-background);
     background-color: var(--card-background);
     backdrop-filter: blur(10px);
     padding: 4px 8px;
     border-radius: 4px;
+}
+
+.results__data-wrapper{
+    margin-top: 4px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 8px;
+}
+
+.data-wrapper__card{
+    background-color: var(--card-background);
+    backdrop-filter: blur(10px);
+    border-radius: 4px;
+    width: calc(1/4);
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 16px;
+    gap: 8px;
+}
+
+.data-wrapper__card > h3{
+    color: var(--card-title-color);
+    font-size: 18px;
+}
+
+.data-wrapper__card > span{
+    font-size: 13px;
+}
+
+.page-footer{
+    width: 100%;
+    max-width: 820px;
+    text-align: center;
+    color: var(--header-text);
+    padding: 8px;
+    background-image: var(--footer-background-gradient);
+}
+
+.page-footer > span{
+    font-weight: 510;
+    text-shadow: 2px 2px 0px var(--footer-black);
 }
