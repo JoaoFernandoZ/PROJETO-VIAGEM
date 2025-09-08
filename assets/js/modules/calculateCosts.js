@@ -18,7 +18,7 @@ function calculateCosts(origin, destination, gasConsume=0, gasPrice=0, averageSp
     const foodCosts = route.custoMedioRefeicao;
 
     return {
-        liters: liters,
+        liters: liters.toFixed(2),
         gasCosts: gasCosts.toFixed(2),
         travelTime: formatTime(travelTime),
         foodCosts: foodCosts.toFixed(2),
